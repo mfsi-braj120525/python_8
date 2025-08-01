@@ -1,0 +1,6 @@
+Note: Project details, what work/contributions you have done there, difficulties?
+Q1. What is MetaClass?
+Q2. What is GIL, memory leak, event lock, mutlithreaing, multiprocessing concept?
+Q3. What is static and class method?
+Q4. What is decorator?
+Q5. What is diffrence between is and == operator?
