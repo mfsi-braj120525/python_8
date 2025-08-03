@@ -1,0 +1,98 @@
+reversed
+sorted
+
+In Python, reversed() and sorted() are built-in functions that operate on iterables. Here's a clear breakdown of how 
+they work internally and how they're used:
+
+🔁 reversed()
+✅ Purpose:
+Returns an iterator that accesses the given sequence in the reverse order.
+
+✅ Works on:
+Sequences: list, tuple, str, range
+
+For custom objects, it must implement __reversed__() or __len__() and __getitem__()
+
+✅ Syntax:
+python
+Copy
+Edit
+reversed(iterable)
+✅ Example:
+python
+Copy
+Edit
+nums = [1, 2, 3, 4]
+rev = reversed(nums)
+print(list(rev))  # Output: [4, 3, 2, 1]
+✅ Internals:
+If the object is a sequence:
+
+It returns a reversed object.
+
+Internally it calls the object’s __reversed__() method (if available).
+
+If not, it uses indexing: obj[len(obj)-1] to obj[0].
+
+For non-sequence iterables (like generators), reversed() won’t work unless you first convert to a sequence.
+
+❌ Will fail:
+python
+Copy
+Edit
+reversed({1, 2, 3})  # TypeError: 'set' object is not reversible
+🔤 sorted()
+✅ Purpose:
+Returns a new sorted list from the items in the iterable.
+
+✅ Works on:
+Any iterable (lists, tuples, strings, sets, dictionaries, generators, etc.)
+
+✅ Syntax:
+python
+Copy
+Edit
+sorted(iterable, *, key=None, reverse=False)
+✅ Example:
+python
+Copy
+Edit
+data = [3, 1, 4, 2]
+sorted_data = sorted(data)
+print(sorted_data)  # Output: [1, 2, 3, 4]
+With key and reverse:
+
+python
+Copy
+Edit
+names = ['alice', 'Bob', 'dave']
+print(sorted(names, key=str.lower))      # Case-insensitive sort
+print(sorted(names, reverse=True))       # Reverse order
+✅ Internals:
+Converts the iterable to a list.
+
+Uses Timsort (a hybrid of merge sort and insertion sort).
+
+Stable sort: original order is preserved when items compare equal.
+
+The key function is applied once per item (very efficient).
+
+python
+Copy
+Edit
+sorted(['a', 'b', 'aa', 'c'], key=len)
+# ['a', 'b', 'c', 'aa'] because key=len returns 1,1,2,1
+Summary Table:
+Function	Returns	Works On	In-place?	Supports key / reverse
+reversed()	Iterator	Sequences	No	No
+sorted()	New List	Any Iterable	No	Yes
+.reverse()	None	Lists only (in-place)	Yes	No
+.sort()	None	Lists only (in-place)	Yes	Yes
+
+--------------------------------------------------------------------------------------
+
+
+ord()
+chr()
+
+unicode and character concept
