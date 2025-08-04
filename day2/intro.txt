@@ -1,0 +1,11 @@
+list, tuple, set, dictionary
+
+is , == 
+= (aliasing)
+copy
+
+
+sorted
+reversed
+
+sort
