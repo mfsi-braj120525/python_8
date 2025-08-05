@@ -1,0 +1,5 @@
+Class
+Object
+
+Instance, static, local variables
+Instance, static, class method
