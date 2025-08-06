@@ -3,3 +3,22 @@ Object
 
 Instance, static, local variables
 Instance, static, class method
+
+Polymorphism
+-----------------------
+Duck type Philosphy 
+
+Overloading
+  Operator overloading
+  Method Overloading
+  Constructor overloading
+
+Overriding
+  Method Overriding
+  Constructor overriding
+
+Encapsulation 
+Inheritance
+Abstraction
+
+---------------------------------
